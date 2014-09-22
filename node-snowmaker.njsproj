@@ -30,6 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="examples\Concurrencytester.js" />
     <Compile Include="examples\Simple.js" />
     <Compile Include="examples\Unittests.js" />
     <Compile Include="index.js" />

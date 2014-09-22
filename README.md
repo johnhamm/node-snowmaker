@@ -64,10 +64,18 @@ This is the name of the blob container that will store all the identifiers for a
 ### bool alphanumeric (default true)
 Snowmaker will use alphanumeric identifiers by default.  If this is set, then Snowmaker will convert the identifier from an int to a base-62 encoded string.  This is useful if you want shorter more human friendly identifiers instead of large ints or GUIDs.  Set to false to use normal ints.  Keep in mind that Azure Table Storage sorts keys alphanumerically, so ints won't appear in numeric order in Table Storage.
 
-  <pre>For instance:
-    
-    Normal ID:         11213189
-    Same ID as base62: L33T</pre>
+#### For instance, this is the same numeric value stored as different types:
+Type | Value 
+--- | ---
+GUID | *00ab1985-0000-0000-0000-000000000000*
+int | *11213189*
+base62 | *L33T*
+
+## Snowmaker and Concurrency
+This is Tatham Oddie's diagram from his blog which explains how Snowmaker handles concurrent clients:
+
+![Snowmaker concurrent model](http://tatham.files.wordpress.com/2011/10/multiple-clients.png?w=479&h=1029 "Snowmaker concurrent model")
+
 
 ## More Information
 
