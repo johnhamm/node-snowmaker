@@ -71,6 +71,8 @@ GUID | *00ab1985-0000-0000-0000-000000000000*
 int | *11213189*
 base62 | *L33T*
 
+Plus, large numbers are compressed into small strings using base62.  For instance, if one of your table identifiers ever reached 68,289,801,377,242 then that ID would be stored as "johnhamm"!
+
 ## Snowmaker and Concurrency
 This is Tatham Oddie's diagram from his blog which explains how Snowmaker handles concurrent clients:
 
