@@ -61,7 +61,7 @@ Snowmaker uses Azure's optimistic concurrency feature to make sure its write ope
 
 This is the name of the blob container that will store all the identifiers for all the tables in your Azure table storage instance.
 
-### bool alphanumeric (default true)
+### bool alphaNumeric (default true)
 Snowmaker will use alphanumeric identifiers by default.  If this is set, then Snowmaker will convert the identifier from an int to a base-62 encoded string.  This is useful if you want shorter more human friendly identifiers instead of large ints or GUIDs.  Set to false to use normal ints.  Keep in mind that Azure Table Storage sorts keys alphanumerically, so ints won't appear in numeric order in Table Storage.
 
 #### For instance, this is the same numeric value stored as different types:
@@ -72,6 +72,9 @@ int | *11213189*
 base62 | *L33T*
 
 Plus, large numbers are compressed into small strings using base62.  For instance, if one of your table identifiers ever reached 68,289,801,377,242 then that ID would be stored as "johnhamm"!
+
+### bool caseSensitive (default true)
+Snowmaker will use alphanumeric identifiers with both uppercase and lowercase letters if this is set to true.  
 
 ## Snowmaker and Concurrency
 This is Tatham Oddie's diagram from his blog which explains how Snowmaker handles concurrent clients:
