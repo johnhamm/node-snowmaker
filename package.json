@@ -19,7 +19,8 @@
   "dependencies": {
     "async": "^0.9.0",
     "azure-storage": "^0.3.3",
-    "base62": "^0.1.2"
+    "base62": "^0.1.2",
+    "codify": "^0.3.0"
   },
   "devDependencies": {
     "chai": "*",

@@ -9,7 +9,7 @@ var generator = require('../lib/snowmaker'),
 var maxCount = Number(process.argv[2]) || 1000,
     delay = Number(process.argv[3]) || 250;
 
-    generator.alphanumeric = !(process.argv[4] && process.argv[4] === "true");
+    generator.alphaNumeric = !(process.argv[4] && process.argv[4] === "true");
 
 generator.connect("UseDevelopmentStorage=true;", function (err) {
     var count = 0;
